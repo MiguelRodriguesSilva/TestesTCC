@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class SpawnLixos : MonoBehaviour
 {
@@ -9,14 +10,14 @@ public class SpawnLixos : MonoBehaviour
     [SerializeField] GameObject[] prefLixo;
     public GameObject localSpawn;
     public float cont, tempoAntes, quandoMusicaComeca;
+    [SerializeField] PlayableDirector pd;
     
     public delegate void QualLixoVaiSerSpawnado(int qualLixo, int qualDirecao);
     public static event QualLixoVaiSerSpawnado LixoDecidido;
 
-    private void FixedUpdate() 
+    private void Update() 
     {
-        cont += Time.deltaTime;
-        if (cont > ((momentosQueLixoSpawna[indexSpawn] + quandoMusicaComeca) - tempoAntes))
+        if (pd.time > ((momentosQueLixoSpawna[indexSpawn] + quandoMusicaComeca) - tempoAntes))
         {
             int lixoSpawn = Random.Range(0,4);
             int direcaoLixo = Random.Range(0,2);

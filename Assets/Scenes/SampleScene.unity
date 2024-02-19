@@ -906,6 +906,16 @@ MonoBehaviour:
   - 25.6
   - 26.8
   - 28.2
+  - 29.5
+  - 31
+  - 33.7
+  - 35.1
+  - 36.4
+  - 37.8
+  - 39
+  - 40.5
+  - 41.9
+  - 43.2
   indexSpawn: 0
   prefLixo:
   - {fileID: 1667444296989553222, guid: 0a709c1097423c5448aa1c3a2d668e32, type: 3}
@@ -916,6 +926,7 @@ MonoBehaviour:
   cont: 0
   tempoAntes: 0.5
   quandoMusicaComeca: 0
+  pd: {fileID: 703952508}
 --- !u!1 &789013999
 GameObject:
   m_ObjectHideFlags: 0

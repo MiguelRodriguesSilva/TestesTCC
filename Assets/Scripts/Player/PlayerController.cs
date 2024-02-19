@@ -24,15 +24,6 @@ public class PlayerController : MonoBehaviour
     private void Update() 
     {
         tempoClicar += Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            BotaoDireita();
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            BotaoEsquerda();
-        }
     }
 
     public void BotaoDireita() 
